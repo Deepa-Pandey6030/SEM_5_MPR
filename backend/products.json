@@ -1,0 +1,182 @@
+[
+  {
+    "id": "item_1",
+    "name": "Denim Jacket",
+    "gender": "Unisex",
+    "price": 89.99,
+    "description": "A classic fit denim jacket made from high-quality, durable cotton. Perfect for a casual look.",
+    "careInstructions": "Machine wash cold with like colors. Do not bleach. Tumble dry low. Iron on low heat if needed.",
+    "keywords": ["denim", "jacket", "outerwear", "denim jacket"]
+  },
+  {
+    "id": "item_2",
+    "name": "Silk Blouse",
+    "gender": "Female",
+    "price": 120.00,
+    "description": "An elegant silk blouse perfect for formal occasions. Available in various colors.",
+    "careInstructions": "Dry clean only to maintain the fabric's integrity and sheen.",
+    "keywords": ["silk", "blouse", "top", "silk blouse"]
+  },
+  {
+    "id": "item_3",
+    "name": "Cotton T-shirt",
+    "gender": "Unisex",
+    "price": 25.00,
+    "description": "A comfortable and breathable cotton t-shirt, a staple for any wardrobe.",
+    "careInstructions": "Machine wash warm. Do not use chlorine bleach. Tumble dry medium. Can be ironed on high heat.",
+    "keywords": ["cotton", "t-shirt", "tee", "top", "cotton t-shirt"]
+  },
+  {
+    "id": "item_4",
+    "name": "Wool Scarf",
+    "gender": "Unisex",
+    "price": 45.00,
+    "description": "A warm and soft wool scarf, perfect for cold weather. Available in multiple patterns.",
+    "careInstructions": "Hand wash with cold water. Lay flat to dry. Do not wring or twist.",
+    "keywords": ["wool", "scarf", "accessory", "wool scarf"]
+  },
+  {
+    "id": "item_5",
+    "name": "Leather Belt",
+    "gender": "Male",
+    "price": 60.00,
+    "description": "A genuine leather belt with a polished metal buckle. Durable and stylish.",
+    "careInstructions": "Wipe with a damp cloth. Use a leather conditioner periodically. Do not submerge in water.",
+    "keywords": ["leather", "belt", "accessory", "leather belt"]
+  },
+  {
+    "id": "item_6",
+    "name": "Chino Trousers",
+    "gender": "Male",
+    "price": 75.00,
+    "description": "Slim-fit chino trousers made from a stretch cotton blend for comfort and style.",
+    "careInstructions": "Machine wash cold. Tumble dry low. Iron on medium heat.",
+    "keywords": ["chinos", "trousers", "pants", "chino trousers"]
+  },
+  {
+    "id": "item_7",
+    "name": "A-Line Skirt",
+    "gender": "Female",
+    "price": 55.00,
+    "description": "A flowy A-line skirt with a floral pattern, perfect for a sunny day.",
+    "careInstructions": "Machine wash on delicate cycle. Hang to dry. Do not iron directly on the print.",
+    "keywords": ["skirt", "a-line", "bottoms", "floral skirt"]
+  },
+  {
+    "id": "item_8",
+    "name": "Hooded Sweatshirt",
+    "gender": "Unisex",
+    "price": 65.00,
+    "description": "A cozy, fleece-lined hooded sweatshirt with a minimalist design.",
+    "careInstructions": "Machine wash inside out with cold water. Tumble dry low.",
+    "keywords": ["hoodie", "sweatshirt", "hooded sweatshirt", "jumper"]
+  },
+  {
+    "id": "item_9",
+    "name": "Leather Handbag",
+    "gender": "Female",
+    "price": 180.00,
+    "description": "A premium genuine leather handbag with multiple compartments and a detachable strap.",
+    "careInstructions": "Clean with a dry cloth. Use leather protector spray. Store in a dust bag.",
+    "keywords": ["handbag", "leather bag", "bag", "accessory", "purse"]
+  },
+  {
+    "id": "item_10",
+    "name": "High-Waisted Jeans",
+    "gender": "Female",
+    "price": 95.00,
+    "description": "Flattering high-waisted jeans with a straight leg cut, made from durable denim.",
+    "careInstructions": "Machine wash cold inside out. Do not bleach. Air dry to preserve color.",
+    "keywords": ["jeans", "high-waisted", "denim", "pants", "bottoms"]
+  },
+  {
+    "id": "item_11",
+    "name": "Polo Shirt",
+    "gender": "Male",
+    "price": 40.00,
+    "description": "A classic polo shirt made from pique cotton. Ideal for a smart-casual look.",
+    "careInstructions": "Machine wash cold. Hang to dry. Do not tumble dry.",
+    "keywords": ["polo", "shirt", "pique", "top", "polo shirt"]
+  },
+  {
+    "id": "item_12",
+    "name": "Knitted Sweater",
+    "gender": "Unisex",
+    "price": 80.00,
+    "description": "A soft, chunky knit sweater made from a wool and cashmere blend. Perfect for winter.",
+    "careInstructions": "Hand wash with cold water. Reshape and lay flat to dry.",
+    "keywords": ["sweater", "knitted", "jumper", "wool sweater"]
+  },
+  {
+    "id": "item_13",
+    "name": "Summer Dress",
+    "gender": "Female",
+    "price": 70.00,
+    "description": "A lightweight, sleeveless dress with a vibrant print. Great for warm weather.",
+    "careInstructions": "Machine wash cold on a delicate cycle. Hang to dry.",
+    "keywords": ["dress", "summer dress", "sundress", "gown"]
+  },
+  {
+    "id": "item_14",
+    "name": "Cargo Shorts",
+    "gender": "Male",
+    "price": 50.00,
+    "description": "Comfortable cargo shorts with multiple pockets, made for practicality and style.",
+    "careInstructions": "Machine wash cold with similar colors. Tumble dry low.",
+    "keywords": ["shorts", "cargo", "cargo shorts", "bottoms"]
+  },
+  {
+    "id": "item_15",
+    "name": "Leather Sneakers",
+    "gender": "Unisex",
+    "price": 110.00,
+    "description": "Premium leather sneakers with a clean, minimalist design and cushioned sole.",
+    "careInstructions": "Wipe with a damp cloth. Use a leather cleaner as needed.",
+    "keywords": ["sneakers", "shoes", "footwear", "leather sneakers"]
+  },
+  {
+    "id": "item_16",
+    "name": "Winter Coat",
+    "gender": "Unisex",
+    "price": 199.99,
+    "description": "A long, insulated coat with a faux fur-lined hood to keep you warm in cold climates.",
+    "careInstructions": "Dry clean only. Do not machine wash.",
+    "keywords": ["coat", "winter coat", "outerwear", "parka"]
+  },
+  {
+    "id": "item_17",
+    "name": "Formal Shirt",
+    "gender": "Male",
+    "price": 85.00,
+    "description": "A crisp white formal shirt made from 100% premium cotton, perfect for business and events.",
+    "careInstructions": "Machine wash warm. Tumble dry on low. Iron while slightly damp for best results.",
+    "keywords": ["formal shirt", "dress shirt", "shirt", "top"]
+  },
+  {
+    "id": "item_18",
+    "name": "Maxi Dress",
+    "gender": "Female",
+    "price": 130.00,
+    "description": "A flowing maxi dress with an elegant silhouette and a subtle side slit.",
+    "careInstructions": "Hand wash with cold water. Hang to dry.",
+    "keywords": ["maxi dress", "dress", "long dress", "evening dress"]
+  },
+  {
+    "id": "item_19",
+    "name": "Sports Shorts",
+    "gender": "Unisex",
+    "price": 30.00,
+    "description": "Lightweight and breathable sports shorts, ideal for gym workouts or running.",
+    "careInstructions": "Machine wash cold. Do not use fabric softener. Tumble dry low.",
+    "keywords": ["sports shorts", "shorts", "athletic", "gym shorts"]
+  },
+  {
+    "id": "item_20",
+    "name": "Tote Bag",
+    "gender": "Unisex",
+    "price": 45.00,
+    "description": "A durable canvas tote bag with leather handles, perfect for everyday use.",
+    "careInstructions": "Spot clean with a damp cloth. Do not machine wash.",
+    "keywords": ["tote bag", "bag", "accessory", "canvas bag"]
+  }
+]
