@@ -1,0 +1,224 @@
+
+
+
+ @import url('https://fonts.googleapis.com/css2?family=Almendra&family=Poppins:wght@400;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #fdfdfd;
+  color: #222;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #111;
+  color: white;
+}
+
+.brand {
+  font-size: 1.8rem;
+  font-family: 'Almendra', serif;
+  color: aliceblue;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  margin-left: 1.5rem;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #00ffc3;
+}
+
+.hero {
+  background-color: bisque;
+  background-size: cover;
+  background-position: center;
+  height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 2rem;
+  color: white;
+}
+
+.hero-text h1 {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+  color: #000;
+}
+
+.hero-text p {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.btn {
+  padding: 10px 20px;
+  background-color: #00ffc3;
+  color: #000;
+  text-decoration: none;
+  font-weight: 600;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #00cc9f;
+}
+
+
+.products {
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.products h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.product-grid {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.product-card {
+  background: #fff;
+  border: 1px solid #eee;
+  border-radius: 10px;
+  padding: 1rem;
+  width: 250px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card img {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+.product-card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.product-card p {
+  font-size: 1rem;
+  color: #555;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+
+footer {
+  background-color: #111;
+  color: white;
+  text-align: center;
+  padding: 1rem 2rem;
+  font-size: 0.9rem;
+}
+
+
+
+
+/* .elevation-1 { box-shadow: 0px 1px 3px rgba(0,0,0,0.2); }
+.elevation-2 { box-shadow: 0px 3px 6px rgba(0,0,0,0.3); }
+.elevation-3 { box-shadow: 0px 10px 20px rgba(0,0,0,0.2); }
+
+
+.btn {
+  padding: 12px 24px;
+  background-color: #6200ea;
+  color: white;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  transition: all 0.3s ease;
+  letter-spacing: 1px;
+}
+
+.btn:hover {
+  background-color: #3700b3;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+.product-card {
+  background: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  padding: 16px;
+  width: 280px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+@keyframes fadeInUp {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+.product-card {
+  animation: fadeInUp 0.6s ease forwards;
+}
+
+:root {
+  --primary-color: #6200ea;
+  --accent-color: #03dac6;
+  --text-color: #333;
+  --bg-color: #f5f5f5;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+.section-divider {
+  height: 4px;
+  width: 60px;
+  background-color: var(--accent-color);
+  margin: 1rem auto 2rem;
+} */
+
+
+
+
+
+@media (max-width: 768px) {
+  .hero-text h1 {
+    font-size: 2rem;
+  }
+
+  .product-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+
+
