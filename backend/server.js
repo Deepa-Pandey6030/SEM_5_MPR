@@ -1,4 +1,4 @@
-//server.js 
+// server.js 
 import express from "express";
 import cors from "cors";
 import dotenv from "dotenv";
@@ -36,36 +36,40 @@ You are a chatbot of online clothing merchandise named as "KAYA" your name is "V
 const clothingData = JSON.parse(fs.readFileSync('./products.json', 'utf8'));
 
 app.post("/api/chat", async (req, res) => {
-   try {
- const { sessionId, userMessage } = req.body;
- if (!sessionId || !userMessage)
-  return res.status(400).json({ error: "sessionId and userMessage required" });
+  try {
+    const { sessionId, userMessage } = req.body;
+    if (!sessionId || !userMessage)
+      return res.status(400).json({ error: "sessionId and userMessage required" });
 
- if (!sessions[sessionId]) sessions[sessionId] = [];
- sessions[sessionId].push({ role: "user", content: userMessage });
-    
+    if (!sessions[sessionId]) sessions[sessionId] = [];
+    sessions[sessionId].push({ role: "user", content: userMessage });
+
+    // minimal logging if desired:
+    console.log(`Session ${sessionId} - User: ${userMessage}`);
+
     const lowerCaseMessage = userMessage.toLowerCase();
     let productFound = null;
 
     for (const product of clothingData) {
-        const isMatch = product.keywords.some(keyword => lowerCaseMessage.includes(keyword));
-        if (isMatch) {
-            productFound = product;
-            break;
-        }
+      const isMatch = product.keywords.some(keyword => lowerCaseMessage.includes(keyword));
+      if (isMatch) {
+        productFound = product;
+        break;
+      }
     }
 
     if (productFound) {
-        const assistantReply = `We have the "${productFound.name}" available. It costs $${productFound.price}. It is a "${productFound.description}". Would you like to know its care instructions?`;
-        
-        sessions[sessionId].push({ role: "assistant", content: assistantReply });
-        
-        return res.json({ reply: assistantReply });
+      const assistantReply = `We have the "${productFound.name}" available. It costs $${productFound.price}. It is a "${productFound.description}". Would you like to know its care instructions?`;
+
+      sessions[sessionId].push({ role: "assistant", content: assistantReply });
+
+      console.log(`Session ${sessionId} - Assistant: ${assistantReply}`);
+      return res.json({ reply: assistantReply });
     }
 
     const historyText = sessions[sessionId]
-        .map((m) => (m.role === "user" ? `User: ${m.content}` : `Assistant: ${m.content}`))
-        .join("\n");
+      .map((m) => (m.role === "user" ? `User: ${m.content}` : `Assistant: ${m.content}`))
+      .join("\n");
 
     const fullInput = `
 System Instruction: ${SYSTEM_PROMPT}
@@ -77,33 +81,25 @@ User: ${userMessage}
 Assistant:
 `;
 
-    // Only call the Gemini API if a product was NOT found
- const response = await ai.models.generateContent({
-  model: "gemini-2.5-pro", 
- contents: fullInput,
- config: {
- temperature: 0.6,
- systemInstruction: SYSTEM_PROMPT,
- },
- });
+    const response = await ai.models.generateContent({
+      model: "gemini-2.5-pro",
+      contents: fullInput,
+      config: {
+        temperature: 0.6,
+        systemInstruction: SYSTEM_PROMPT,
+      },
+    });
 
- const assistantReply = response.text?.trim() || "Sorry, no response.";
+    const assistantReply = response.text?.trim() || "Sorry, no response.";
 
- sessions[sessionId].push({ role: "assistant", content: assistantReply });
+    sessions[sessionId].push({ role: "assistant", content: assistantReply });
 
- res.json({ reply: assistantReply });
- } catch (err) {
- console.error("Chat error:", err);
- res.status(500).json({ error: "LLM request failed", details: err.message });
- }
- console.log("Current History: ",sessionId,sessions[sessionId]);
-});
-
-app.get("/api/chat/history",(req,res)=>{
- const {sessionId}=req.params;
- const history=sessions[sessionId];
- if(!history) return res.status (404).json({error:"Session for this id is not found!!"});
- res.json({sessionId,history});
+    console.log(`Session ${sessionId} - Assistant: ${assistantReply}`);
+    res.json({ reply: assistantReply });
+  } catch (err) {
+    console.error("Chat error:", err);
+    res.status(500).json({ error: "LLM request failed", details: err.message });
+  }
 });
 
 const port = process.env.PORT || 4000;
