@@ -1,0 +1,180 @@
+<div class="product-listing">
+  <div class="container">
+    <!-- Page Header -->
+    <div class="page-header">
+      <h1 class="page-title">All Products</h1>
+      <p class="page-subtitle">{{ filteredProducts.length }} products found</p>
+    </div>
+
+    <div class="listing-content">
+      <!-- Filters Sidebar -->
+      <aside class="filters-sidebar">
+        <div class="filters-header">
+          <h3>Filters</h3>
+          <button class="clear-filters-btn" (click)="clearFilters()">Clear All</button>
+        </div>
+
+        <!-- Search -->
+        <div class="filter-group">
+          <label class="filter-label">Search</label>
+          <input 
+            type="text" 
+            [(ngModel)]="searchQuery"
+            (ngModelChange)="onFilterChange()"
+            placeholder="Search products..."
+            class="filter-input">
+        </div>
+
+        <!-- Category Filter -->
+        <div class="filter-group">
+          <label class="filter-label">Category</label>
+          <select 
+            [(ngModel)]="selectedCategory"
+            (ngModelChange)="onFilterChange()"
+            class="filter-select">
+            <option value="">All Categories</option>
+            <option *ngFor="let category of categories" [value]="category.name">
+              {{ category.name }}
+            </option>
+          </select>
+        </div>
+
+        <!-- Brand Filter -->
+        <div class="filter-group">
+          <label class="filter-label">Brand</label>
+          <select 
+            [(ngModel)]="selectedBrand"
+            (ngModelChange)="onFilterChange()"
+            class="filter-select">
+            <option value="">All Brands</option>
+            <option *ngFor="let brand of brands" [value]="brand">
+              {{ brand }}
+            </option>
+          </select>
+        </div>
+
+        <!-- Size Filter -->
+        <div class="filter-group">
+          <label class="filter-label">Size</label>
+          <select 
+            [(ngModel)]="selectedSize"
+            (ngModelChange)="onFilterChange()"
+            class="filter-select">
+            <option value="">All Sizes</option>
+            <option *ngFor="let size of sizes" [value]="size">
+              {{ size }}
+            </option>
+          </select>
+        </div>
+
+        <!-- Color Filter -->
+        <div class="filter-group">
+          <label class="filter-label">Color</label>
+          <select 
+            [(ngModel)]="selectedColor"
+            (ngModelChange)="onFilterChange()"
+            class="filter-select">
+            <option value="">All Colors</option>
+            <option *ngFor="let color of colors" [value]="color">
+              {{ color }}
+            </option>
+          </select>
+        </div>
+
+        <!-- Price Range Filter -->
+        <div class="filter-group">
+          <label class="filter-label">Price Range</label>
+          <div class="price-range">
+            <input 
+              type="number" 
+              [(ngModel)]="priceRange.min"
+              (ngModelChange)="onFilterChange()"
+              placeholder="Min"
+              class="price-input">
+            <span class="price-separator">-</span>
+            <input 
+              type="number" 
+              [(ngModel)]="priceRange.max"
+              (ngModelChange)="onFilterChange()"
+              placeholder="Max"
+              class="price-input">
+          </div>
+        </div>
+      </aside>
+
+      <!-- Products Section -->
+      <main class="products-section">
+        <!-- Sort and View Options -->
+        <div class="products-header">
+          <div class="results-info">
+            <span>Showing {{ (currentPage - 1) * itemsPerPage + 1 }}-{{ getEndIndex() }} of {{ filteredProducts.length }} products</span>
+          </div>
+          <div class="sort-options">
+            <label for="sort-select">Sort by:</label>
+            <select 
+              id="sort-select"
+              [(ngModel)]="selectedSort"
+              (ngModelChange)="onSortChange()"
+              class="sort-select">
+              <option *ngFor="let option of sortOptions" [value]="option.value">
+                {{ option.label }}
+              </option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Products Grid -->
+        <div class="products-grid" *ngIf="getPaginatedProducts().length > 0; else noProducts">
+          <app-product-card 
+            *ngFor="let product of getPaginatedProducts()" 
+            [product]="product"
+            (addToCart)="onAddToCart($event)">
+          </app-product-card>
+        </div>
+
+        <!-- No Products Message -->
+        <ng-template #noProducts>
+          <div class="no-products">
+            <div class="no-products-content">
+              <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1">
+                <circle cx="12" cy="12" r="10"></circle>
+                <line x1="12" y1="8" x2="12" y2="12"></line>
+                <line x1="12" y1="16" x2="12.01" y2="16"></line>
+              </svg>
+              <h3>No products found</h3>
+              <p>Try adjusting your filters or search terms</p>
+              <button class="btn btn-primary" (click)="clearFilters()">Clear Filters</button>
+            </div>
+          </div>
+        </ng-template>
+
+        <!-- Pagination -->
+        <div class="pagination" *ngIf="totalPages > 1">
+          <button 
+            class="pagination-btn"
+            [disabled]="currentPage === 1"
+            (click)="onPageChange(currentPage - 1)">
+            Previous
+          </button>
+          
+          <div class="pagination-numbers">
+            <button 
+              *ngFor="let page of [].constructor(totalPages); let i = index"
+              class="pagination-number"
+              [class.active]="currentPage === i + 1"
+              (click)="onPageChange(i + 1)">
+              {{ i + 1 }}
+            </button>
+          </div>
+          
+          <button 
+            class="pagination-btn"
+            [disabled]="currentPage === totalPages"
+            (click)="onPageChange(currentPage + 1)">
+            Next
+          </button>
+        </div>
+      </main>
+    </div>
+  </div>
+</div>

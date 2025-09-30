@@ -1,0 +1,53 @@
+name,price,originalPrice,description,category,brand,images,sizes,colors,rating,reviewCount,inStock,isNew,isOnSale,discount
+Classic Cotton Tee,24.99,29.99,Soft 100% cotton crew neck,Tops,FashionCo,"/assets/images/classic cotton tee.webp","S;M;L;XL","White;Black;Navy",4.5,128,true,false,true,15
+V-Neck Basic Tee,22.50,,Lightweight v-neck tee,Tops,UrbanLine,"/assets/images/V-Neck Basic Tee.jpg","S;M;L;XL","White;Grey;Olive",4.2,87,true,true,false,
+Oversized Graphic Tee,29.99,39.99,Relaxed fit with front graphic,Tops,StreetWear,"/assets/images/Oversized Graphic Tee.jpg","M;L;XL","Black;White",4.4,152,true,false,true,25
+Ribbed Tank Top,18.99,,Stretch ribbed tank,Tops,Everyday,"/assets/images/Ribbed Tank Top.webp","XS;S;M;L","White;Beige",4.1,63,true,true,false,
+Long Sleeve Henley,32.00,42.00,Three-button henley,Tops,NorthPeak,"/assets/images/Long Sleeve Henley.jpg","S;M;L;XL","Charcoal;Navy",4.6,95,true,false,true,24
+Striped Crew Tee,26.00,,Yarn-dyed stripe tee,Tops,SeaBreeze,"/assets/images/Striped Crew Tee.jpg","S;M;L","Navy;White",4.0,48,true,false,false,
+Performance Dry Tee,27.50,34.00,Moisture-wicking athletic tee,Tops,SportMax,"/assets/images/Performance Dry Tee.webp","S;M;L;XL","Blue;Black",4.3,112,true,true,true,20
+Linen Blend Shirt,39.99,49.99,Breathable short-sleeve linen shirt,Tops,Coastline,"/assets/images/Linen Blend Shirt.webp","S;M;L;XL","Sand;Sky",4.5,74,true,false,true,20
+Boxy Crop Tee,21.99,,Cropped tee with boxy fit,Tops,TrendLab,"/assets/images/Boxy Crop Tee.jpg","XS;S;M","Pink;White;Black",4.2,58,true,true,false,
+Thermal Waffle Tee,28.99,34.99,Waffle-knit long sleeve,Tops,MountainBase,"/assets/images/Thermal Waffle Tee.jpg","S;M;L;XL","Olive;Brown;Cream",4.4,66,true,false,true,17
+Slim Fit Jeans,59.99,79.99,Classic slim fit denim,Bottoms,DenimBrand,"/assets/images/Slim Fit Jeans.jpg","28;30;32;34;36","Blue;Black",4.3,210,true,false,true,25
+Relaxed Taper Jeans,62.00,,Relaxed taper with stretch,Bottoms,DenimBrand,"/assets/images/Relaxed Taper Jeans.jpg","30;32;34;36","Mid Blue;Dark Blue",4.2,134,true,true,false,
+High Rise Mom Jeans,64.50,74.50,High rise vintage wash,Bottoms,Indigo&Co,"/assets/images/High Rise Mom Jeans.webp","26;28;30;32;34","Light Blue;Stone",4.5,176,true,false,true,13
+Straight Leg Jeans,58.00,,Straight fit everyday denim,Bottoms,UrbanLine,"/assets/images/Straight Leg Jeans.webp","28;30;32;34;36","Black;Blue",4.1,90,true,true,false,
+Bootcut Jeans,65.00,79.00,Subtle flare at hem,Bottoms,FrontierDenim,"/assets/images/Bootcut Jeans.avif","28;30;32;34;36","Dark Blue",4.0,77,true,false,true,18
+Chino Pants,49.99,,Stretch cotton chinos,Bottoms,Everyday,"/assets/images/Chino Pants.webp","28;30;32;34;36","Khaki;Navy;Olive",4.3,126,true,true,false,
+Cargo Joggers,46.00,56.00,Utility pockets and cuffed hems,Bottoms,StreetWear,"/assets/images/Cargo Joggers.webp","S;M;L;XL","Olive;Black",4.2,98,true,false,true,18
+Linen Trousers,54.99,,Breathable linen blend pants,Bottoms,Coastline,"/assets/images/Linen Trousers.jpg","28;30;32;34","Sand;Stone",4.4,69,true,true,false,
+Tailored Dress Pants,72.00,89.00,Flat-front tailored fit,Bottoms,NorthPeak,"/assets/images/Tailored Dress Pants.jpg","30;32;34;36","Charcoal;Navy",4.6,81,true,false,true,19
+Athletic Knit Pants,44.00,,Lightweight knit with zip pockets,Bottoms,SportMax,"/assets/images/Athletic Knit Pants.avif","S;M;L;XL","Black;Grey",4.3,115,true,true,false,
+Floral Summer Dress,49.99,59.99,Light and breezy floral print,Dresses,SummerStyle,"/assets/images/Floral Summer Dress.jpg","XS;S;M;L","Floral;White",4.7,233,true,true,true,17
+Midi Wrap Dress,56.00,,Faux-wrap silhouette,Dresses,CityChic,"/assets/images/Midi Wrap Dress.jpg","XS;S;M;L;XL","Red;Navy;Emerald",4.5,188,true,false,false,
+Slip Satin Dress,65.00,85.00,Shiny satin finish,Dresses,Evening&Co,"/assets/images/Slip Satin Dress.webp","XS;S;M;L","Champagne;Black",4.6,140,true,false,true,24
+Tiered Maxi Dress,69.00,,Flowy tiered skirt,Dresses,SummerStyle,"/assets/images/Tiered Maxi Dress.jpeg","S;M;L;XL","Blue;Terracotta",4.4,99,true,true,false,
+Smocked A-Line Dress,58.50,,Smocked bodice,Dresses,MeadowWear,"/assets/images/Smocked A-Line Dress.webp","XS;S;M;L","Lilac;Mint",4.3,76,true,true,false,
+Shirt Dress,62.00,78.00,Belted shirt dress,Dresses,Coastline,"/assets/images/Shirt Dress.webp","S;M;L;XL","Olive;Sand",4.5,121,true,false,true,21
+Knit Sweater Dress,59.00,,Cozy rib-knit,Dresses,NorthPeak,"/assets/images/Knit Sweater Dress.jpg","S;M;L","Cream;Charcoal",4.2,88,true,true,false,
+Pleated Midi Skirt,45.00,,Flowy pleats,Bottoms,CityChic,"/assets/images/Pleated Midi Skirt.webp","XS;S;M;L","Black;Blush",4.3,70,true,true,false,
+Quilted Puffer Jacket,109.00,139.00,Lightweight insulated puffer,Outerwear,WinterGear,"/assets/images/Quilted Puffer Jacket.avif","S;M;L;XL","Black;Navy",4.8,205,true,false,true,22
+Waterproof Shell Jacket,119.00,,2.5L breathable shell,Outerwear,MountainBase,"/assets/images/Waterproof Shell Jacket.webp","S;M;L;XL","Teal;Charcoal",4.6,132,true,true,false,
+Wool Blend Coat,149.00,189.00,Single-breasted wool blend,Outerwear,CityChic,"/assets/images/Wool Blend Coat.jpeg","S;M;L","Camel;Black",4.7,118,true,false,true,21
+Overshirt Shacket,79.00,,Brushed twill overshirt,Outerwear,UrbanLine,"/assets/images/Overshirt Shacket.webp","S;M;L;XL","Olive;Sand",4.4,94,true,true,false,
+Trench Coat,139.00,169.00,Classic belt trench,Outerwear,Coastline,"/assets/images/Trench Coat.avif","S;M;L;XL","Beige;Navy",4.6,102,true,false,true,18
+Down Parka,179.00,219.00,700-fill down warmth,Outerwear,WinterGear,"/assets/images/Down Parka.webp","S;M;L;XL","Black;Forest",4.7,156,true,false,true,19
+Fleece Zip Hoodie,44.99,54.99,Midweight fleece hoodie,Outerwear,ComfortWear,"/assets/images/Fleece Zip Hoodie.avif","S;M;L;XL;XXL","Grey;Black;Navy",4.5,176,true,true,true,18
+Thermal Pullover Hoodie,49.00,,Waffle-knit interior,Outerwear,ComfortWear,"/assets/images/Thermal Pullover Hoodie.jpg","S;M;L;XL","Charcoal;Olive",4.3,89,true,false,false,
+Quarter-Zip Sweatshirt,46.00,,Brushed back fleece,Outerwear,Everyday,"/assets/images/Quarter-Zip Sweatshirt.jpg","S;M;L;XL","Navy;Maroon",4.2,73,true,true,false,
+Cable Knit Sweater,52.00,64.00,Classic cable knit,Tops,NorthPeak,"/assets/images/Cable Knit Sweater.jpg","S;M;L;XL","Cream;Sage",4.6,101,true,false,true,19
+Merino Crew Sweater,69.00,89.00,Extra-fine merino wool,Tops,CityChic,"/assets/images/Merino Crew Sweater.jpg","S;M;L","Charcoal;Navy",4.7,111,true,false,true,22
+Mock Neck Sweater,58.00,,Soft touch yarn,Tops,Everyday,"/assets/images/Mock Neck Sweater.jpg","S;M;L;XL","Black;Taupe",4.3,84,true,true,false,
+Oxford Button-Down,55.00,,Washed oxford cloth,Tops,Coastline,"/assets/images/Oxford Button-Down.jpg","S;M;L;XL","White;Blue",4.4,92,true,true,false,
+Flannel Shirt,48.00,,Brushed flannel,Tops,MountainBase,"/assets/images/Flannel Shirt.webp","S;M;L;XL","Red Check;Green Check",4.5,130,true,false,false,
+Poplin Short Sleeve Shirt,42.00,,Crisp poplin,Tops,UrbanLine,"/assets/images/Poplin Short Sleeve Shirt.webp","S;M;L;XL","Sky;White",4.1,61,true,true,false,
+Paperbag Waist Shorts,36.00,,Soft twill shorts,Bottoms,CityChic,"/assets/images/Paperbag Waist Shorts.jpg","XS;S;M;L","Sand;Terracotta",4.2,53,true,true,false,
+Pleated Tailored Shorts,39.00,,Tailored pleat front,Bottoms,NorthPeak,"/assets/images/Pleated Tailored Shorts.jpeg","S;M;L","Navy;Beige",4.0,40,true,false,false,
+Wide Leg Trousers,68.00,84.00,High-rise drape,Bottoms,TrendLab,"/assets/images/Wide Leg Trousers.jpg","S;M;L;XL","Black;Cream",4.4,77,true,false,true,19
+A-Line Skirt,44.00,,Knee-length A-line,Bottoms,MeadowWear,"/assets/images/A-Line Skirt.webp","XS;S;M;L","Navy;Blush",4.2,58,true,true,false,
+Ponte Pencil Skirt,49.00,,Stretch ponte knit,Bottoms,CityChic,"/assets/images/Ponte Pencil Skirt.jpeg","XS;S;M;L","Black;Grey",4.3,72,true,false,false,
+Wrap Cardigan,57.00,,Tie-waist knit,Tops,MeadowWear,"/assets/images/Wrap Cardigan.jpg","S;M;L;XL","Oat;Charcoal",4.4,83,true,true,false,
+Ribbed Turtleneck,46.00,,Fine rib knit,Tops,Everyday,"/assets/images/Ribbed Turtleneck.webp","XS;S;M;L","Black;Ivory",4.5,96,true,false,false,
+Quilted Liner Jacket,89.00,109.00,Light liner jacket,Outerwear,UrbanLine,"/assets/images/Quilted Liner Jacket.avif","S;M;L","Black;Olive",4.3,68,true,true,true,18
+

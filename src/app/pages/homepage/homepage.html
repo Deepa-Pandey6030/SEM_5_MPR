@@ -1,0 +1,129 @@
+<!-- Hero Section -->
+<section class="hero">
+  <div class="hero-container">
+    <div class="hero-content">
+      <h1 class="hero-title">Discover Your Style</h1>
+      <p class="hero-subtitle">Shop the latest fashion trends with unbeatable prices</p>
+      <div class="hero-actions">
+        <a routerLink="/products" class="btn btn-primary">Shop Now</a>
+        <a href="#featured" class="btn btn-outline">View Collection</a>
+      </div>
+    </div>
+    <div class="hero-image">
+      <img src="/assets/images/hero-fashion.avif" alt="Fashion Hero" class="hero-img">
+    </div>
+  </div>
+</section>
+
+<!-- Featured Categories with gender tabs -->
+<section class="featured-categories" id="featured">
+  <div class="container">
+    <h2 class="section-title">Shop by Category</h2>
+    <div class="gender-tabs">
+      <button class="tab" [class.active]="selectedGender==='Women'" (click)="selectedGender='Women'">Women</button>
+      <button class="tab" [class.active]="selectedGender==='Men'" (click)="selectedGender='Men'">Men</button>
+      <button class="tab" [class.active]="selectedGender==='All'" (click)="selectedGender='All'">All</button>
+    </div>
+    <div class="categories-grid">
+      <div *ngFor="let category of filteredCategories()" class="category-card">
+        <a routerLink="/products" [queryParams]="{category: category.name}" class="category-link">
+          <div class="category-image">
+            <img [src]="category.image" [alt]="category.name" class="category-img">
+          </div>
+          <div class="category-info">
+            <h3 class="category-name">{{ category.name }}</h3>
+            <p class="category-count">{{ category.productCount }} products</p>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Featured Products -->
+<section class="featured-products">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title">Featured Products</h2>
+      <a routerLink="/products" class="view-all-link">View All Products</a>
+    </div>
+    <div class="products-grid">
+      <app-product-card 
+        *ngFor="let product of featuredProducts" 
+        [product]="product"
+        (addToCart)="onAddToCart($event)">
+      </app-product-card>
+    </div>
+  </div>
+</section>
+
+<!-- Trending Products -->
+<section class="trending-products">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title">Trending Now</h2>
+      <a routerLink="/products" class="view-all-link">View All Products</a>
+    </div>
+    <div class="products-grid">
+      <app-product-card 
+        *ngFor="let product of trendingProducts" 
+        [product]="product"
+        (addToCart)="onAddToCart($event)">
+      </app-product-card>
+    </div>
+  </div>
+</section>
+
+<!-- Flash Sale Banner -->
+<section class="flash-sale">
+  <div class="container">
+    <div class="flash-sale-content">
+      <div class="flash-sale-info">
+        <h2 class="flash-sale-title">Flash Sale</h2>
+        <p class="flash-sale-subtitle">Up to 50% off on selected items</p>
+        <div class="countdown">
+          <div class="countdown-item">
+            <span class="countdown-number">02</span>
+            <span class="countdown-label">Days</span>
+          </div>
+          <div class="countdown-item">
+            <span class="countdown-number">14</span>
+            <span class="countdown-label">Hours</span>
+          </div>
+          <div class="countdown-item">
+            <span class="countdown-number">32</span>
+            <span class="countdown-label">Minutes</span>
+          </div>
+        </div>
+        <a routerLink="/products" [queryParams]="{sale: true}" class="btn btn-primary">Shop Sale</a>
+      </div>
+      <div class="flash-sale-image">
+        <img src="/assets/images/flash-sale.jpeg" alt="Flash Sale" class="flash-sale-img">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Newsletter Section -->
+<section class="newsletter">
+  <div class="container">
+    <div class="newsletter-content">
+      <div class="newsletter-info">
+        <h2 class="newsletter-title">Stay in Style</h2>
+        <p class="newsletter-subtitle">Subscribe to our newsletter and get 10% off your first order</p>
+      </div>
+      <form (ngSubmit)="onNewsletterSubmit()" class="newsletter-form">
+        <div class="newsletter-input-group">
+          <input 
+            type="email" 
+            [(ngModel)]="newsletterEmail"
+            name="email"
+            placeholder="Enter your email address"
+            class="newsletter-input"
+            required>
+          <button type="submit" class="newsletter-btn">Subscribe</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,146 @@
+@use '../../../styles' as *;
+
+.cart-page {
+  padding: 32px 0;
+}
+
+.container {
+  max-width: 1040px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.cart-items {
+  background: #fff;
+  border: 1px solid #eaeaea;
+  border-radius: 8px;
+}
+
+.cart-item {
+  display: grid;
+  grid-template-columns: 96px 1fr auto;
+  gap: 16px;
+  padding: 16px;
+  border-bottom: 1px solid #f0f0f0;
+
+  &:last-child {
+    border-bottom: 0;
+  }
+
+  img {
+    width: 96px;
+    height: 96px;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 1px solid #eee;
+  }
+
+  .item-info {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    h3 {
+      font-size: 16px;
+      margin: 0;
+    }
+
+    .muted {
+      color: #666;
+      font-size: 13px;
+    }
+
+    .qty {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+
+      button {
+        width: 28px;
+        height: 28px;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        background: #fff;
+        cursor: pointer;
+      }
+
+      input {
+        width: 56px;
+        height: 28px;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        padding: 0 6px;
+        text-align: center;
+      }
+    }
+
+    .link {
+      color: #e11d48;
+      background: none;
+      border: none;
+      padding: 0;
+      text-align: left;
+      cursor: pointer;
+    }
+  }
+
+  .item-price {
+    font-weight: 600;
+    min-width: 88px;
+    text-align: right;
+  }
+}
+
+.cart-summary {
+  margin-top: 16px;
+  margin-left: auto;
+  width: 320px;
+  background: #fff;
+  border: 1px solid #eaeaea;
+  border-radius: 8px;
+  padding: 16px;
+
+  .row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 12px;
+    font-size: 14px;
+  }
+
+  .btn {
+    width: 100%;
+    margin-top: 8px;
+    height: 40px;
+    border-radius: 6px;
+  }
+}
+
+.empty {
+  padding: 40px 0;
+  text-align: center;
+
+  h3 {
+    margin-bottom: 16px;
+  }
+}
+
+@media (max-width: 768px) {
+  .cart-item {
+    grid-template-columns: 72px 1fr auto;
+
+    img {
+      width: 72px;
+      height: 72px;
+    }
+  }
+
+  .cart-summary {
+    width: 100%;
+  }
+}
+

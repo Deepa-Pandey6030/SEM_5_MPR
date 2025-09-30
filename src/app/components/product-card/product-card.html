@@ -1,0 +1,85 @@
+<div class="product-card">
+  <div class="product-image-container">
+    <a [routerLink]="['/products', product.id]">
+      <img [src]="product.images[0]" [alt]="product.name" class="product-image">
+    </a>
+    
+    <!-- Badges -->
+    <div class="product-badges">
+      <span *ngIf="product.isNew" class="badge badge-new">New</span>
+      <span *ngIf="product.isOnSale" class="badge badge-sale">Sale</span>
+      <span *ngIf="product.discount" class="badge badge-discount">-{{ product.discount }}%</span>
+    </div>
+
+    <!-- Quick Actions -->
+    <div class="product-actions">
+      <button class="action-btn wishlist-btn" title="Add to Wishlist">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+        </svg>
+      </button>
+      <button class="action-btn quick-view-btn" title="Quick View">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+          <circle cx="12" cy="12" r="3"></circle>
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <div class="product-info">
+    <div class="product-category">{{ product.category }}</div>
+    <h3 class="product-name">
+      <a [routerLink]="['/products', product.id]">{{ product.name }}</a>
+    </h3>
+    <div class="product-brand">{{ product.brand }}</div>
+    
+    <!-- Rating -->
+    <div class="product-rating">
+      <div class="stars">
+        <span *ngFor="let star of [1,2,3,4,5]" 
+              class="star" 
+              [class.filled]="star <= product.rating">
+          ★
+        </span>
+      </div>
+      <span class="rating-text">({{ product.reviewCount }})</span>
+    </div>
+
+    <!-- Price -->
+    <div class="product-price">
+      <span class="current-price">${{ product.price.toFixed(2) }}</span>
+      <span *ngIf="product.originalPrice" class="original-price">${{ product.originalPrice.toFixed(2) }}</span>
+    </div>
+
+    <!-- Size and Color Selection -->
+    <div class="product-options" *ngIf="product.sizes.length > 0 || product.colors.length > 0">
+      <div class="size-options" *ngIf="product.sizes.length > 0">
+        <label>Size:</label>
+        <select [(ngModel)]="selectedSize" class="size-select">
+          <option *ngFor="let size of product.sizes" [value]="size">{{ size }}</option>
+        </select>
+      </div>
+      
+      <div class="color-options" *ngIf="product.colors.length > 0">
+        <label>Color:</label>
+        <select [(ngModel)]="selectedColor" class="color-select">
+          <option *ngFor="let color of product.colors" [value]="color">{{ color }}</option>
+        </select>
+      </div>
+    </div>
+
+    <!-- Add to Cart Button -->
+    <button 
+      class="add-to-cart-btn" 
+      (click)="onAddToCart()"
+      [disabled]="!product.inStock">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <circle cx="9" cy="21" r="1"></circle>
+        <circle cx="20" cy="21" r="1"></circle>
+        <path d="m1 1 4 4 13 1 2 8H7l-2-4H1"></path>
+      </svg>
+      {{ product.inStock ? 'Add to Cart' : 'Out of Stock' }}
+    </button>
+  </div>
+</div>
